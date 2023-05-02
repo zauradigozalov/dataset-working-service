@@ -24,24 +24,28 @@ Go to the project directory
   cd dataset-working-service
 ```
 
-To run this project, you will need to add the following environment variables to your .env file
+Copy the .env.example file to create a new .env file:
+
+```bash
+  cp .env.example .env
 ```
 
-APP_NAME=Dataset-Working-Service
-APP_KEY=base64:ICEsSHm2LSTurCG4TDa8KylL9kJxnqTyzlkwBU+9NRI=
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=dataset_working_service
-DB_USERNAME=sail
-DB_PASSWORD=password
-
+To run this project, you will need to add the following environment variables to your .env file
+```
+  APP_NAME=Dataset-Working-Service
+  APP_KEY=base64:ICEsSHm2LSTurCG4TDa8KylL9kJxnqTyzlkwBU+9NRI=
+  DB_CONNECTION=mysql
+  DB_HOST=mysql
+  DB_PORT=3306
+  DB_DATABASE=dataset_working_service
+  DB_USERNAME=sail
+  DB_PASSWORD=password
 ```
 
 Run the application in Docker to get packages
 
 ```bash
-docker run --rm \
+  docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v "$(pwd):/var/www/html" \
     -w /var/www/html \
